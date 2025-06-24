@@ -10,11 +10,13 @@ pipeline{
 
     stages {
         stage('build') {
+            steps{
             sh"""
             echo "this is build stage"
             ls -ltr 
             ll
             """
+        }
         }
 
     }
