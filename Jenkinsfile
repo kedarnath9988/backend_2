@@ -31,12 +31,20 @@ pipeline{
             """
         }
         }
+        stage('artifact'){
+            steps{
+                sh"""
+                zip -r backend-$appversion.zip  * -x Jenkinsfile -x backend-$appversion.zip
+                
+               """
+            }
+        }
 
     }
     post{
         always{
-            echo "i will excuote always"
-            
+            echo "i will excuite always"
+            deleteDir()
         }
         success{
             echo "pipeline excuited successfully "
