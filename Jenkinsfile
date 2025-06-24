@@ -35,7 +35,8 @@ pipeline{
             steps{
                 sh"""
            
-                echo "this is artifact file one"
+                zip -r backend-$appversion.zip * -x Jenkins -x backend-$appversion.zip
+                ls -ltr 
                 
                """
             }
@@ -45,6 +46,7 @@ pipeline{
     post{
         always{
             echo "i will excuite always"
+            deleteDir()
             
         }
         success{
