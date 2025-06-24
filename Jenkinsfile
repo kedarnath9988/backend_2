@@ -34,7 +34,8 @@ pipeline{
         stage('artifact'){
             steps{
                 sh"""
-                zip -r backend-$appversion.zip  * -x Jenkinsfile -x backend-$appversion.zip
+                #zip -r backend-$appversion.zip  * -x Jenkinsfile -x backend-$appversion.zip
+                echo "this is artifact file one"
                 
                """
             }
@@ -44,7 +45,7 @@ pipeline{
     post{
         always{
             echo "i will excuite always"
-            deleteDir()
+            
         }
         success{
             echo "pipeline excuited successfully "
