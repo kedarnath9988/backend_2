@@ -9,10 +9,10 @@ pipeline{
     }
 
     stages {
-        stage('build') {
+        stage('install dependencies ') {
             steps{
             sh"""
-            echo "this is build stage"
+            npm install 
             ls -ltr 
            
             """
