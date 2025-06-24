@@ -34,7 +34,7 @@ pipeline{
         stage('artifact'){
             steps{
                 sh"""
-                #zip -r backend-$appversion.zip  * -x Jenkinsfile -x backend-$appversion.zip
+           
                 echo "this is artifact file one"
                 
                """
