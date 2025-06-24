@@ -36,7 +36,7 @@ pipeline{
     post{
         always{
             echo "i will excuote always"
-            deleteDir()
+            
         }
         success{
             echo "pipeline excuited successfully "
