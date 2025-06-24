@@ -13,6 +13,7 @@ pipeline{
             sh"""
             echo "this is build stage"
             ls -ltr 
+            ll
             """
         }
 
